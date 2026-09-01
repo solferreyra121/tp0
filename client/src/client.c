@@ -69,6 +69,10 @@ t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
 	nuevo_config = config_create("cliente.config");
+	
+	if(nuevo_config == NULL){
+		abort();
+	}
 
 	return nuevo_config;
 }
